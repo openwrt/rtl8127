@@ -54,5 +54,10 @@ bool rtl8127_check_fiber_mode_support(struct rtl8127_private *tp);
 bool rtl8127_sds_If_i2c_is_10g_sfp_cap(struct rtl8127_private *tp);
 bool rtl8127_sds_sfp_connected_8127(struct rtl8127_private *tp);
 void _rtl8127_set_sds_phy_caps_8127(struct rtl8127_private *tp, u32 cap);
+int rtl8127_get_module_info(struct net_device *netdev,
+                            struct ethtool_modinfo *modinfo);
+int rtl8127_get_module_eeprom(struct net_device *netdev,
+                              struct ethtool_eeprom *ee,
+                              u8 *data);
 
 #endif /* _LINUX_R8127_FIBER_H */

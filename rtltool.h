@@ -35,7 +35,7 @@
 #ifndef _LINUX_RTLTOOL_H
 #define _LINUX_RTLTOOL_H
 
-#define SIOCRTLTOOL		SIOCDEVPRIVATE+1
+#define SIOCRTLTOOL        (SIOCDEVPRIVATE+1)
 
 enum rtl_cmd {
         RTLTOOL_READ_MAC=0,
@@ -73,19 +73,19 @@ enum rtl_cmd {
 };
 
 struct rtltool_cmd {
-        __u32	cmd;
-        __u32	offset;
-        __u32	len;
-        __u32	data;
+        __u32    cmd;
+        __u32    offset;
+        __u32    len;
+        __u32    data;
 };
 
 struct rtltool_sds_cmd {
-        __u32	cmd;
-        __u16	index;
-        __u16	page;
-        __u16	addr;
-        __u16	len;
-        __u32	data;
+        __u32    cmd;
+        __u16    index;
+        __u16    page;
+        __u16    addr;
+        __u16    len;
+        __u32    data;
 };
 
 enum mode_access {
